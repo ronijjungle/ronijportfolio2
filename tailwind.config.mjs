@@ -25,7 +25,7 @@ export default {
       },
 
       fontFamily: {
-        sans: ['"Space Grotesk"', "system-ui", "sans-serif"],
+        sans: ['"ABC Ginto Condensed"', "system-ui", "sans-serif"],
       },
 
       // Bratus-inspired type scale: large, bold, editorial
