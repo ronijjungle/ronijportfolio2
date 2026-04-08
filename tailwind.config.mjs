@@ -12,14 +12,15 @@ export default {
     extend: {
       colors: {
         brand: {
-          black: "#191919",
-          "off-black": "#222222",
-          "dark-grey": "#646464",
-          "mid-grey": "#A0A0A0",
-          "light-grey": "#E6E6E6",
-          "paper-grey": "#F2F2F2",
-          "off-white": "#FDFDFD",
-          "cream": "#F9F6EE",
+          // Core palette from brand guidelines
+          black: "#1D1D1B",         // Pantone Black C
+          "off-black": "#2A2A28",   // Slightly lighter for sections
+          "dark-grey": "#6B6B65",   // UI dividers, tertiary text
+          "mid-grey": "#A3A39C",    // Secondary text
+          "light-grey": "#E7E7DD",  // White Sand — primary text on dark
+          "paper-grey": "#F0F0E8",  // Between sand and white
+          "off-white": "#FFFFF7",   // White — highlights, headings
+          "cream": "#E7E7DD",       // White Sand — section backgrounds
         },
       },
 
