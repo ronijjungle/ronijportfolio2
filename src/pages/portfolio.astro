@@ -19,20 +19,22 @@ const categories = [...new Set(projects.map((p) => p.data.category))];
 <Base title="Work" description="Selected projects by Ronij Barahi.">
 
   <!-- Hero (BLACK) -->
-  <section class="bg-brand-black page-container pt-16 md:pt-26 pb-18 md:pb-30">
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-      <div>
-        <p class="text-micro uppercase text-brand-dark-grey mb-3">The work</p>
-        <h1 class="text-display-lg text-brand-off-white">Proof over promises.</h1>
-        <p class="text-body text-brand-mid-grey mt-3 max-w-lg">Here&rsquo;s a selection of projects I&rsquo;m proud of. The rest are under NDA — or I&rsquo;d have to kill you.</p>
-      </div>
-      <!-- Category labels -->
-      <div class="flex flex-wrap gap-3">
-        {categories.map((cat) => (
-          <span class="text-caption text-brand-dark-grey border border-brand-dark-grey/25 px-3 py-1">
-            {cat}
-          </span>
-        ))}
+  <section class="bg-brand-black">
+    <div class="page-container pt-16 md:pt-26 pb-18 md:pb-30">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+        <div>
+          <p class="text-micro uppercase text-brand-dark-grey mb-3">The work</p>
+          <h1 class="text-display-lg text-brand-off-white">Proof over promises.</h1>
+          <p class="text-body text-brand-mid-grey mt-3 max-w-lg">Here&rsquo;s a selection of projects I&rsquo;m proud of. The rest are under NDA — or I&rsquo;d have to kill you.</p>
+        </div>
+        <!-- Category labels -->
+        <div class="flex flex-wrap gap-3">
+          {categories.map((cat) => (
+            <span class="text-caption text-brand-dark-grey border border-brand-dark-grey/25 px-3 py-1">
+              {cat}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   </section>
