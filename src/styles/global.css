@@ -190,7 +190,7 @@
   }
 
   ::selection {
-    @apply bg-brand-off-white/15 text-brand-off-white;
+    @apply bg-brand-off-white text-brand-black;
   }
 }
 
