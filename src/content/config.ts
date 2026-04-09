@@ -27,6 +27,7 @@ const projects = defineCollection({
     client: z.string(),
     thumbnail: z.string(),
     tags: z.array(z.string()).default([]),
+    gallery: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
     order: z.number().default(0),
   }),

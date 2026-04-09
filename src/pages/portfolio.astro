@@ -51,6 +51,7 @@ const categories = [...new Set(projects.map((p) => p.data.category))];
             year={project.data.year}
             tags={project.data.tags}
             slug={project.slug}
+            thumbnail={project.data.thumbnail}
             variant="light"
           />
         ))}

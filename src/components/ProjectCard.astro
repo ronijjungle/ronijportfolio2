@@ -12,10 +12,11 @@ interface Props {
   year: string;
   tags: string[];
   slug: string;
+  thumbnail?: string;
   variant?: "dark" | "light";
 }
 
-const { title, description, category, year, tags, slug, variant = "dark" } = Astro.props;
+const { title, description, category, year, tags, slug, thumbnail, variant = "dark" } = Astro.props;
 const isLight = variant === "light";
 ---
 
@@ -28,16 +29,20 @@ const isLight = variant === "light";
         ? "bg-brand-black/5 border border-brand-black/10 group-hover:border-brand-black/25"
         : "bg-brand-off-black border border-brand-dark-grey/15 group-hover:border-brand-dark-grey/40",
     ]}>
-      <div class="absolute inset-0 flex items-center justify-center">
-        <span class:list={[
-          "text-heading transition-colors duration-300",
-          isLight
-            ? "text-brand-black/15 group-hover:text-brand-black/30"
-            : "text-brand-dark-grey/50 group-hover:text-brand-dark-grey",
-        ]}>
-          {title}
-        </span>
-      </div>
+      {thumbnail ? (
+        <img src={thumbnail} alt={title} class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+      ) : (
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span class:list={[
+            "text-heading transition-colors duration-300",
+            isLight
+              ? "text-brand-black/15 group-hover:text-brand-black/30"
+              : "text-brand-dark-grey/50 group-hover:text-brand-dark-grey",
+          ]}>
+            {title}
+          </span>
+        </div>
+      )}
     </div>
 
     <!-- Meta -->
